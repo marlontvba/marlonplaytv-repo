@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+
+  <!-- REPOSITÓRIO MARLON PLAY TV -->
+  <addon id="repository.marlonplaytv" name="Marlon Play TV Repositório" version="1.0.0" provider-name="Marlon Play TV">
+    <extension point="xbmc.addon.repository" name="Marlon Play TV Repositório">
+      <info>https://marlontvba.github.io/marlonplaytv-repo/addons.xml</info>
+      <checksum>https://marlontvba.github.io/marlonplaytv-repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://marlontvba.github.io/marlonplaytv-repo/</datadir>
+    </extension>
+  </addon>
+
+  <!-- MARLON PLAY TV -->
+  <addon id="plugin.video.MarlonPlayTV.Matrix" name="[B][COLOR white]MARLON PLAY TV[/COLOR][/B]" version="2.1.4" provider-name="Marlon Play TV">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.six"/>
+      <import addon="script.module.kodi-six"/>
+      <import addon="script.module.requests"/>
+      <import addon="script.module.simplejson"/>
+      <import addon="inputstream.adaptive" optional="true"/>
+      <import addon="inputstream.ffmpegdirect" optional="true"/>
+      <import addon="script.module.inputstreamhelper" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>[B][COLOR white]TV, Filmes, Séries, Desenhos e Animes.[/COLOR]</summary>
+      <description>[B][COLOR blue]●[/COLOR] [COLOR white]Marlon Play TV é um IPTV feito por um garoto de apenas 15 anos, desculpe qualquer erro, ou travamento.[/COLOR][/B][CR][B][COLOR firebrick]●[/COLOR] [COLOR white]Marlon Play TV.[/COLOR][/B][CR][B][COLOR firebrick]●[/COLOR] [COLOR white]Não vendemos nosso IPTV por fora, caso ache em sites ou mesmo apps é falso.[/COLOR][/B]</description>
+      <disclaimer>[B][COLOR white]OBRIGADO POR USAR NOSSO IPTV [COLOR gold]S2[/COLOR][/COLOR][/B]</disclaimer>
+      <news>[B][COLOR gold]v2.1.4 - KODI 19+[/COLOR][/B]</news>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+
+  <!-- CLOUDFLARE DNS -->
+  <addon id="addon.dns" name="CLOUDFLARE DNS" version="1.0.1" provider-name="Joel">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+      <summary>Proxy com DNS Cloudflare</summary>
+      <platform>all</platform>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+
+  <!-- INPUTSTREAM ADAPTIVE -->
+  <addon id="inputstream.adaptive" name="InputStream Adaptive" version="2.6.7" provider-name="peak3d">
+    <requires>
+      <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.3.0"/>
+      <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
+      <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.6"/>
+      <import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4"/>
+      <import addon="kodi.binary.instance.inputstream" minversion="3.0.1" version="3.0.1"/>
+      <import addon="kodi.binary.instance.videocodec" minversion="2.0.1" version="2.0.2"/>
+    </requires>
+    <extension point="kodi.inputstream" name="adaptive" extension="" tags="true" library_windows="inputstream.adaptive.dll"/>
+    <extension point="xbmc.addon.metadata">
+      <summary>InputStream client for adaptive streams</summary>
+      <description>Suporte a protocolos: MPEG-DASH, HLS e Smooth Streaming</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
+
+</addons>
